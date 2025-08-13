@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{B4A64B41-E2D6-4653-91B2-42A0B16B006E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Readle.Domain", "Readle.Domain\Readle.Domain.csproj", "{2553CFCA-62AE-4C20-89AC-BCB8C6A3593D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Readle.Infrastructure", "Readle.Infrastructure\Readle.Infrastructure.csproj", "{3BBB100E-FC8E-4364-9C6C-44DE0ED099B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Readle.Application", "Readle.Application\Readle.Application.csproj", "{9CC33A24-48C3-48E0-8A5E-87949355BCB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Readle.Client", "Readle.Client\Readle.Client.csproj", "{6F617B4F-5CEA-459B-AB4B-6A4D2F569C46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Readle.Api", "Readle.Api\Readle.Api.csproj", "{D8ACC9C8-304D-4B9D-A736-B0DA1143F7EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2553CFCA-62AE-4C20-89AC-BCB8C6A3593D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2553CFCA-62AE-4C20-89AC-BCB8C6A3593D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2553CFCA-62AE-4C20-89AC-BCB8C6A3593D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2553CFCA-62AE-4C20-89AC-BCB8C6A3593D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBB100E-FC8E-4364-9C6C-44DE0ED099B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBB100E-FC8E-4364-9C6C-44DE0ED099B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBB100E-FC8E-4364-9C6C-44DE0ED099B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBB100E-FC8E-4364-9C6C-44DE0ED099B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CC33A24-48C3-48E0-8A5E-87949355BCB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC33A24-48C3-48E0-8A5E-87949355BCB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CC33A24-48C3-48E0-8A5E-87949355BCB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CC33A24-48C3-48E0-8A5E-87949355BCB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F617B4F-5CEA-459B-AB4B-6A4D2F569C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F617B4F-5CEA-459B-AB4B-6A4D2F569C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F617B4F-5CEA-459B-AB4B-6A4D2F569C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F617B4F-5CEA-459B-AB4B-6A4D2F569C46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8ACC9C8-304D-4B9D-A736-B0DA1143F7EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8ACC9C8-304D-4B9D-A736-B0DA1143F7EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8ACC9C8-304D-4B9D-A736-B0DA1143F7EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8ACC9C8-304D-4B9D-A736-B0DA1143F7EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B4A64B41-E2D6-4653-91B2-42A0B16B006E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{2553CFCA-62AE-4C20-89AC-BCB8C6A3593D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{3BBB100E-FC8E-4364-9C6C-44DE0ED099B2} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{9CC33A24-48C3-48E0-8A5E-87949355BCB4} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{6F617B4F-5CEA-459B-AB4B-6A4D2F569C46} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{D8ACC9C8-304D-4B9D-A736-B0DA1143F7EA} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7C15587-6A0C-4DA5-8BA7-E14C65AF070C}
+	EndGlobalSection
+EndGlobal
