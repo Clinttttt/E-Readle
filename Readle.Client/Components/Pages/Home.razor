@@ -1,16 +1,33 @@
 ﻿@page "/"
 @using Readle.Client.Components.Layout
-
+@inject NavigationManager navigation
 @rendermode InteractiveServer
 @attribute [StreamRendering]
 
 
-  
 
+<div class="flex flex-row justify-center items-center min-h-screen ">
+    <img class="@ImageClass" src="img/readle-cover.png" width="402" height="402" />
+</div>
 
 <!--<NavLink href="counter" class="btn">Get Started</NavLink>-->
 
 @code{
- 
+    private string ImageClass = "hidden-before-animate";
+   
+    protected override async Task OnAfterRenderAsync( bool Render)
+
+    {
+
+        if (Render)
+        {
+            ImageClass = "fade-in";
+            StateHasChanged();
+
+            await Task.Delay(2500);
+            navigation.NavigateTo("/MainMenu");
+
+        }
+    }
 
 }
