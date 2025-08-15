@@ -40,8 +40,8 @@ namespace Readle.Infrastructure
                  NameClaimType = ClaimTypes.Name
              });
             services.AddScoped<IAuthServices, AuthServices>();
-           
-          
+
+         
     
             
                   

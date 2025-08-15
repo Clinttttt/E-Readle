@@ -1,15 +1,38 @@
 using Readle.Client.Components;
-
+using Readle.Client.Services;
 using Readle.Infrastructure;
 using Readle.Infrastructure.Services;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+
+builder.Services.AddScoped<BookServices>();
+builder.Services.AddScoped<PageState>();
+
+
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddHttpClient<BookApiServices>();
 builder.Services.AddHttpClient<AuthApiServices>(options =>
 options.BaseAddress = new Uri("https://localhost:7248"));
+
+
+builder.Services.AddHttpClient("WithRedirects")
+    .ConfigurePrimaryHttpMessageHandler(() =>
+    {
+        return new HttpClientHandler
+        {
+            AllowAutoRedirect = true,
+            MaxAutomaticRedirections = 10,
+            AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
+        };
+    });
+
+
+
 
 var app = builder.Build();
 

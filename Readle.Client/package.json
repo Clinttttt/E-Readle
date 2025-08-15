@@ -14,5 +14,8 @@
     "@tailwindcss/cli": "^4.1.11",
     "daisyui": "^5.0.50",
     "tailwindcss": "^4.1.11"
+  },
+  "dependencies": {
+    "tailwind-scrollbar-hide": "^4.0.0"
   }
 }

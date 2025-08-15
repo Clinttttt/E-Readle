@@ -1,0 +1,42 @@
+﻿@using Readle.Domain.Model
+@using Readle.Infrastructure.Services
+@inject BookApiServices bookApiServices
+
+<div class="flex  overflow-x-scroll scrollbar-hide w-full">
+    <div class="gap-2 flex-nowrap flex ">
+        @if (Books is null)
+        {
+            <h1>empty</h1>
+        }
+        else
+        {
+            @foreach (var book in Books!)
+            {
+                if (book.Format != null && book.Format!.TryGetValue("image/jpeg", out var coverUrl))
+                {
+                    <div class="relative flex-shrink-0  rounded-t-lg  w-20 h-32">
+
+                        <img class=" top-0 left-0 w-full h-full object-cover"
+                             src="@coverUrl"
+                             alt="Book cover image" />
+                    </div>
+                }
+            }
+        }
+
+
+    </div>
+</div>
+
+@code {
+    public string? ImageUrl;
+
+    public List<BookGutendex>? Books { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Books = await bookApiServices.ScienceAsync();
+
+    }
+
+}

@@ -1,0 +1,32 @@
+﻿@page "/DisplayBook/{BookId:int}"
+@using Readle.Domain.Model
+@inject HttpClient http
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+
+
+<h3>DisplayBook</h3>
+
+@if (Title is null)
+{
+    <h1>Empty</h1>
+}
+else
+{
+    <h1>@Title</h1>
+}
+
+
+
+@code {
+    [Parameter]
+    public int BookId { get; set; }
+    string? Title;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var books  = await http.GetFromJsonAsync<BookGutendex>($"https://gutendex.com/books/{BookId}");
+        Title = books!.title;
+    }
+
+}
