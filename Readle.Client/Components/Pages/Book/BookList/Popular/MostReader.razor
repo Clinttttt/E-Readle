@@ -9,7 +9,7 @@
             <h1>empty</h1>
         }else
         {
-            @foreach (var book in Books!)
+            @foreach (var book in Books.Take(10))
             {
                 if (book.Format != null && book.Format!.TryGetValue("image/jpeg", out var coverUrl))
                 {
@@ -17,10 +17,10 @@
                         <div class="relative flex-shrink-0  rounded-t-lg  w-20 h-32">
 
                             <img class=" top-0 left-0 w-full h-full object-cover"
-                                 src="@coverUrl"
-                                 alt="Book cover image" />
+                            src="@coverUrl"
+                            alt="Book cover image" />
                         </div>
-                   </NavLink>
+                    </NavLink>
                 }
             }
         }
@@ -31,8 +31,8 @@
 
 @code {
     public string? ImageUrl;
-
-     [Parameter]
+    public int Limit = 10;
+    [Parameter]
     public List<BookGutendex>? Books { get; set; }
 
     protected override async Task OnInitializedAsync()

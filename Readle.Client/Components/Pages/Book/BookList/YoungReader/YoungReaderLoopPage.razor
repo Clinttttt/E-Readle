@@ -10,7 +10,7 @@
         }
         else
         {
-            @foreach (var book in Books!)
+            @foreach (var book in Books.Take(Limit))
             {
                 if (book.Format != null && book.Format!.TryGetValue("image/jpeg", out var coverUrl))
                 {
@@ -24,13 +24,12 @@
             }
         }
 
-
     </div>
 </div>
 
 @code {
     public string? ImageUrl;
-
+    public int Limit = 10;
     public List<BookGutendex>? Books { get; set; }
 
     protected override async Task OnInitializedAsync()
